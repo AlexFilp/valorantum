@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/valorantum/static/css/main.7acaea2f.css",
-    "main.js": "/valorantum/static/js/main.86b6e1e5.js",
+    "main.css": "/valorantum/static/css/main.cd2e038f.css",
+    "main.js": "/valorantum/static/js/main.591c5ae9.js",
     "index.html": "/valorantum/index.html",
-    "main.7acaea2f.css.map": "/valorantum/static/css/main.7acaea2f.css.map",
-    "main.86b6e1e5.js.map": "/valorantum/static/js/main.86b6e1e5.js.map"
+    "main.cd2e038f.css.map": "/valorantum/static/css/main.cd2e038f.css.map",
+    "main.591c5ae9.js.map": "/valorantum/static/js/main.591c5ae9.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.86b6e1e5.js"
+    "static/css/main.cd2e038f.css",
+    "static/js/main.591c5ae9.js"
   ]
 }
