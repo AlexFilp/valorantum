@@ -1,12 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const Wrapper = styled.div`
-  flex-grow: 1;
-`;
 
 const HomePage = () => {
-  return <Wrapper style={{}}>HomePage</Wrapper>;
+  return (
+    <div>
+      <h1>HomePage</h1>
+    </div>
+  );
 };
 
 export default HomePage;
