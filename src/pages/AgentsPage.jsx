@@ -1,7 +1,7 @@
-import React from 'react';
+import AgentsList from 'components/Agents/AgentsList';
 
 const AgentsPage = () => {
-  return <div>AgentsPage</div>;
+  return <div><AgentsList /></div>;
 };
 
 export default AgentsPage;
