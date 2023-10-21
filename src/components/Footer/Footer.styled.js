@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
 export const FooterWrapper = styled.footer`
-  height: 100px;
+  min-height: 70px;
   border-top: 1px solid black;
 `;
