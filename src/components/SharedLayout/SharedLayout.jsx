@@ -1,34 +1,16 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import Container from 'components/Container/Container';
-import { Nav, Wrapper } from './SharedLayout.styled';
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
 
 const SharedLayout = () => {
   return (
     <>
-      <header>
-        <Container>
-          <Wrapper>
-            <h3>VALORANTUM</h3>
-            <Nav>
-              <NavLink to={'/'}>Home</NavLink>
-              <NavLink to={'/agents'}>Agents</NavLink>
-              <NavLink to={'/maps'}>Maps</NavLink>
-              <NavLink to={'/weapons'}>Weapons</NavLink>
-            </Nav>
-          </Wrapper>
-        </Container>
-      </header>
+      <Header />
       <Suspense fallback={<h1>LOADING...</h1>}>
-        <Container>
-          <Outlet />
-        </Container>
+        <Outlet />
       </Suspense>
-      <footer>
-        <Container>
-          <h1>FOOTER</h1>
-        </Container>
-      </footer>
+      <Footer />
     </>
   );
 };
