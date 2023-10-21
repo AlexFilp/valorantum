@@ -1,14 +1,16 @@
 import Container from 'components/Container/Container';
-import React from 'react';
-import { Nav, Wrapper } from './Header.styled';
+import { HeaderWrapper, Logo, Nav, Wrapper } from './Header.styled';
 import { NavLink } from 'react-router-dom';
+import logo from '../../images/icons/valorant-logo.svg';
 
 const Header = () => {
   return (
-    <Header>
+    <HeaderWrapper>
       <Container>
         <Wrapper>
-          <h3>VALORANTUM</h3>
+          <NavLink to={'/'}>
+            <Logo src={logo} alt="logo" />
+          </NavLink>
           <Nav>
             <NavLink to={'/'}>Home</NavLink>
             <NavLink to={'/agents'}>Agents</NavLink>
@@ -17,7 +19,7 @@ const Header = () => {
           </Nav>
         </Wrapper>
       </Container>
-    </Header>
+    </HeaderWrapper>
   );
 };
 
