@@ -5,7 +5,6 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <Container>
-        <h2>FOOTER</h2>
       </Container>
     </FooterWrapper>
   );

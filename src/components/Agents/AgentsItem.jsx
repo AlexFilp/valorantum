@@ -1,12 +1,12 @@
 import React from 'react';
-import { Lishka, Peshechkla } from './AgentsItemStyled';
+import { AgentsItemImg, AgentsItemLi, AgentsItemP} from './AgentsItemStyled';
 
 const AgentsItem = ({displayName, fullPortrait, uuid}) => {
   return (
-    <Lishka>
-      <img src={fullPortrait} alt="" />
-      <Peshechkla>{displayName}</Peshechkla>
-    </Lishka>
+    <AgentsItemLi>
+      <AgentsItemImg src={fullPortrait} alt={displayName} />
+      <AgentsItemP>{displayName}</AgentsItemP>
+    </AgentsItemLi>
   );
 };
 

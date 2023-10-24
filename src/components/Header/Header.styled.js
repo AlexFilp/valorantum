@@ -10,6 +10,7 @@ export const HeaderContainer = styled.div`
 
   margin-left: auto;
   margin-right: auto;
+  
 
   @media screen and (min-width: 768px) {
     max-width: 768px;
@@ -32,10 +33,13 @@ export const HeaderWrapper = styled.header`
   justify-content: center;
   align-items: center;
 
+
   background-color: ${props =>
-    props.$scrolled !== 'false' ? 'rgba(90, 90, 90, 0.6)' : 'transparent'};
-  transition: background-color 0.3s ease-in-out;
+    props.$scrolled !== 'false' ? 'rgba(10, 20, 30, 0.7)' : 'transparent'};
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   z-index: 1000;
+  color: ${props =>
+    props.$scrolled !== 'false' ? 'white' : 'inherit'};
 `;
 
 export const Wrapper = styled.div`
