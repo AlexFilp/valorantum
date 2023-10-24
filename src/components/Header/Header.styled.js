@@ -116,4 +116,12 @@ export const NaviLink = styled(NavLink)`
   display: block;
   padding: 7px 0;
   font-weight: 500;
+
+  transition: color 250ms ease;
+
+  &:hover,
+  &:focus,
+  &.active {
+    color: red;
+  }
 `;
