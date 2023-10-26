@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
-export const ListWrapper = styled.div`
+export const Wrapper = styled.section`
   padding-top: 100px;
   padding-bottom: 40px;
+`;
+
+export const ListWrapper = styled.div`
+  margin-top: 40px;
 `;
 
 export const List = styled.ul`

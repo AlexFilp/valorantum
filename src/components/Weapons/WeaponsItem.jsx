@@ -1,21 +1,10 @@
-import {
-  Image,
-  ImageWrapper,
-  Item,
-  Name,
-  NameWRapper,
-} from './WeaponsItem.styled';
+import { Item, Name, NameWRapper } from './WeaponsItem.styled';
 
 const WeaponsItem = ({ weapon }) => {
   return (
     <Item>
       <div>
-        <img
-          src={weapon.displayIcon}
-          alt={weapon.displayName}
-          width="200"
-          height="200"
-        />
+        <img src={weapon.displayIcon} alt={weapon.displayName} />
       </div>
       <NameWRapper>
         <Name>{weapon.displayName}</Name>

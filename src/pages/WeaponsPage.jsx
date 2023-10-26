@@ -3,11 +3,11 @@ import WeaponsList from 'components/Weapons/WeaponsList';
 
 const WeaponsPage = () => {
   return (
-    <section style={{ flexGrow: 1 }}>
+    <div style={{ flexGrow: 1 }}>
       <Container>
         <WeaponsList />
       </Container>
-    </section>
+    </div>
   );
 };
 

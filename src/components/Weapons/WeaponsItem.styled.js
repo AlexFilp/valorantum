@@ -7,7 +7,7 @@ export const Item = styled.li`
   align-items: center;
   border: 1px solid black;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
 `;
 
 export const NameWRapper = styled.div`
