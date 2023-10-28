@@ -1,66 +1,78 @@
 import React, { useState } from 'react';
-import { BtnList, SelectInput } from './WeaponsFilter.styled';
+import {
+  Btn,
+  BtnList,
+  Item,
+  Option,
+  SelectInput,
+} from './WeaponsFilter.styled';
 
 const WeaponsFilter = ({ setWeaponsFilter }) => {
   const [selectedValue, setSelectedValue] = useState('');
 
   const handleSelectChange = event => {
-    console.log('event.target.value', event.target.value);
     setSelectedValue(event.target.value);
     setWeaponsFilter(event.target.value);
   };
 
   const onClickSelectChange = option => {
+    setSelectedValue(option);
     setWeaponsFilter(option);
   };
 
   return (
     <div>
       <SelectInput value={selectedValue} onChange={handleSelectChange}>
-        <option value="Sidearm">Sidearm</option>
-        <option value="Shotgun">Shotguns</option>
-        <option value="Rifle">Rifles</option>
-        <option value="SMG">SMG's</option>
-        <option value="Heavy">Heavy</option>
-        <option value="Sniper">Snipers</option>
-        <option value="Melee">Melee</option>
+        <Option value="All">All</Option>
+        <Option value="Sidearm">Sidearm</Option>
+        <Option value="Shotgun">Shotguns</Option>
+        <Option value="Rifle">Rifles</Option>
+        <Option value="SMG">SMG's</Option>
+        <Option value="Heavy">Heavy</Option>
+        <Option value="Sniper">Snipers</Option>
+        <Option value="Melee">Melee</Option>
       </SelectInput>
       <BtnList>
-        <li>
-          <button type="button" onClick={() => onClickSelectChange('Sidearm')}>
+        <Item $selected={selectedValue === 'All'}>
+          <Btn type="button" onClick={() => onClickSelectChange('All')}>
+            All
+          </Btn>
+        </Item>
+        <Item $selected={selectedValue === 'Sidearm'}>
+          <Btn type="button" onClick={() => onClickSelectChange('Sidearm')}>
             Sidearm
-          </button>
-        </li>
-        <li>
-          <button type="button" onClick={() => onClickSelectChange('Shotgun')}>
+          </Btn>
+        </Item>
+        <Item $selected={selectedValue === 'Shotgun'}>
+          <Btn type="button" onClick={() => onClickSelectChange('Shotgun')}>
             Shotguns
-          </button>
-        </li>
-        <li>
-          <button type="button" onClick={() => onClickSelectChange('Rifle')}>
+          </Btn>
+        </Item>
+        <Item $selected={selectedValue === 'Rifle'}>
+          <Btn type="button" onClick={() => onClickSelectChange('Rifle')}>
             Rifles
-          </button>
-        </li>
-        <li>
-          <button type="button" onClick={() => onClickSelectChange('SMG')}>
+          </Btn>
+        </Item>
+        <Item $selected={selectedValue === 'SMG'}>
+          <Btn type="button" onClick={() => onClickSelectChange('SMG')}>
             SMG's
-          </button>
-        </li>
-        <li>
-          <button type="button" onClick={() => onClickSelectChange('Heavy')}>
+          </Btn>
+        </Item>
+        <Item $selected={selectedValue === 'Heavy'}>
+          <Btn type="button" onClick={() => onClickSelectChange('Heavy')}>
             Heavy
-          </button>
-        </li>
-        <li>
-          <button type="button" onClick={() => onClickSelectChange('Sniper')}>
+          </Btn>
+        </Item>
+        <Item $selected={selectedValue === 'Sniper'}>
+          <Btn type="button" onClick={() => onClickSelectChange('Sniper')}>
             Snipers
-          </button>
-        </li>
-        <li>
-          <button type="button" onClick={() => onClickSelectChange('Melee')}>
+          </Btn>
+        </Item>
+        <Item $selected={selectedValue === 'Melee'}>
+          <Btn type="button" onClick={() => onClickSelectChange('Melee')}>
             Melee
-          </button>
-        </li>
+          </Btn>
+        </Item>
       </BtnList>
     </div>
   );

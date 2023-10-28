@@ -6,6 +6,7 @@ import WeaponsFilter from './WeaponsFilter/WeaponsFilter';
 import { filterWeapons } from 'helpers/filterWeapons';
 
 const WeaponsList = () => {
+  const [allWeapons, setAllWeapons] = useState([]);
   const [weapons, setWeapons] = useState({});
   const [weaponsFilter, setWeaponsFilter] = useState('Sidearm');
   const [loading, setloading] = useState(false);
@@ -15,6 +16,7 @@ const WeaponsList = () => {
     getWeapons()
       .then(data => {
         console.log(filterWeapons(data));
+        setAllWeapons(data);
         setWeapons(filterWeapons(data));
       })
       .catch(err => console.log(err))
@@ -23,18 +25,13 @@ const WeaponsList = () => {
       });
   }, []);
 
-  console.log(
-    'weaponsFilter === weapons[weaponsFilter]',
-    weaponsFilter === weapons[weaponsFilter]
-  );
-
-  const filteredWeapons = weapons[weaponsFilter] || [];
+  const filteredWeapons = weapons[weaponsFilter] || allWeapons;
 
   return (
     <Wrapper>
       <WeaponsFilter setWeaponsFilter={setWeaponsFilter} />
       <ListWrapper>
-        {loading && <h1>Loadong...</h1>}
+        {loading && <h1>Loading...</h1>}
         {!loading && (
           <List>
             {filteredWeapons.map(weapon => (
