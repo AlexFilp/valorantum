@@ -8,14 +8,15 @@ import { filterWeapons } from 'helpers/filterWeapons';
 const WeaponsList = () => {
   const [allWeapons, setAllWeapons] = useState([]);
   const [weapons, setWeapons] = useState({});
-  const [weaponsFilter, setWeaponsFilter] = useState('Sidearm');
+  const [weaponsFilter, setWeaponsFilter] = useState('All');
   const [loading, setloading] = useState(false);
 
   useEffect(() => {
     setloading(true);
     getWeapons()
       .then(data => {
-        console.log(filterWeapons(data));
+        console.log('data', data);
+        console.log('filterWeapons(data)', filterWeapons(data));
         setAllWeapons(data);
         setWeapons(filterWeapons(data));
       })

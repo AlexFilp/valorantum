@@ -8,7 +8,7 @@ import {
 } from './WeaponsFilter.styled';
 
 const WeaponsFilter = ({ setWeaponsFilter }) => {
-  const [selectedValue, setSelectedValue] = useState('');
+  const [selectedValue, setSelectedValue] = useState('All');
 
   const handleSelectChange = event => {
     setSelectedValue(event.target.value);
